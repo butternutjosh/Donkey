@@ -6,6 +6,19 @@
         </title>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            
+            
+            function save_func(){
+                x=document.GetElementById("form");
+                const form_data=["",""];
+                for (let i=0;i<x.length-1;i++){
+                    form_data.push(x.elements[i].value);
+                }
+                }
+            console.log(form_data);
+            
+        </script>
     </head>
     <body style="background-color: aqua;">
 
@@ -13,22 +26,28 @@
         <h1 >welcome to donkey</h1>
         <h2>sign up here</h2>
         </div>
-        <form>
+        <form id="form">
             <div>
             <lable for ="userName">Username</lable>
+        
             <input type="text" id ="userName" name="user_name">
+            </div>
+            <div>
             <lable for ="password">Password</lable>
             <input type="text" id="password" name="_password">
+        </div>
+        <div>
             <lable for="cPassword">Confirm Password</lable>
             <input type="text" id="cPassword" name="c_password">
+            </div>
+            <div>
             <lable for ="email">Email Address</lable>
             <input type ="text" id="email" name="_email">
-            <button type="submit">sign up</button>
             </div>
+            <button type="submit" onclick="save_func()">sign up</button>
+            
         </form>
         
     </body>
-    <script>
-        
-    </script>
+    
 </html>
